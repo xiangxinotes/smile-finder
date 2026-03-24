@@ -161,7 +161,7 @@ function hidePrivacy(){
 }
 
 function updateHistoryUI(){
-    historyListUI.innerHTML = history.length > 0 ? history.map(s => `<li class="history-item">${s}</li>`).join('') : `<li>No sessions yet</li>`;
+    historyListUI.innerHTML = history.length > 0 ? history.map(s => `<li class="history-item">${s}</li>`).join('') : ``;
 }
 
 function closeTutorial(){
