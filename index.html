@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		(function(){
+			const params = new URLSearchParams(window.location.search);
+			const forcedLang = params.get('lang');
+			const storageLang = localStorage.getItem('user_lang_pref');
+
+			if (forcedLang === 'en'){
+				localStorage.setItem('user_lang_pref','en');
+				return;
+			}
+
+			if (window.location.pathname !== '/' && window.location.pathname==='/index.html') return;
+			
+			const targetLang = storageLang || navigator.language.toLowerCase();
+			if (targetLang.includes('zh-tw') || targetLang.includes('zh-hk') || targetLang.includes('zh-hant')){
+				window.location.href="./zh-hant/" + window.location.search;
+			}
+			else if(targetLang.includes('zh')){
+				window.location.href="./zh-hans/" + window.location.search;
+			}
+		})();
+		
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+
+	<title>Smile Finder | Daily Positivity & Focus Trainer</title>
+	<meta name="description" content="A 30-second brain training game to improve focus and mental well-being by identifying positive visual cues.">
+	<meta name="keywords" content="brain training, focus trainer, focus training, smile finder, positive psychology, positivity, cognitive game, mental health tool,find the smiley face out">
+	
+	<meta property="og:title" content="30s Challenge: How many smiles can you find?">
+	<meta property="og:description" content="Capture positive expressions and train your positive tendencies. In just 30 seconds, make your brain sharper and happier.">
+	<meta property="og:image" content="https://xiangxinotes.github.io/smile-finder/assets/og-en.png">
+	<meta property="og:url" content="https://xiangxinotes.github.io/smile-finder/">
+	<meta property="og:type" content="website">
+
+	<link rel="canonical" href="https://xiangxinotes.github.io/smile-finder/">
+	<link rel="alternate" hreflang="en" href="https://xiangxinotes.github.io/smile-finder/">
+	<link rel="alternate" hreflang="zh-hans" href="https://xiangxinotes.github.io/smile-finder/zh-hans/">
+	<link rel="alternate" hreflang="zh-hant" href="https://xiangxinotes.github.io/smile-finder/zh-hant/">
+	<link rel="alternate" hreflang="x-default" href="https://xiangxinotes.github.io/smile-finder/">
+
+	<link rel="icon" href="https://gav.farm/😃">
+	<link rel="manifest" href="./manifest.json">
+	<meta name="theme-color" content="#1a1a2e">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+	<div id="game-container">
+		<header id="header-area">
+			<h1>SMILE FINDER</h1>
+			<div id="stats-bar">
+				<div class="stat-item"><span class="label">TIME</span><span class="val">⏱️ <span id="timer">30</span></span></div>
+				<div class="stat-item"><span class="label">SCORE</span><span class="val">⭐️ <span id="score">0</span></span></div>
+				<div class="stat-item"><span class="label">BEST</span><span class="val">🏆 <span id="best">0</span></span></div>
+			</div>
+			<div id="target-box">
+				<span class="label">CURRENT TARGETS:</span>
+				<div id="target-list">😃</div>
+			</div>
+		</header>
+		<main id="grid"></main>
+
+		<footer id="footer-area">
+			<a href="./zh-hans/?autoplay=true">简中</a> | 
+			<a href="./zh-hant/?autoplay=true">繁中</a> | 
+			<a onclick="showPrivacy()" class="privacy-link">Privacy Policy</a>
+		</footer>
+	</div>
+
+	<div id="tutorial-overlay" class="modal" style="display: flex;">
+		<div style="font-size: 4rem; margin-bottom: 20px;">🧠</div>
+		<h2>Train Your Focus</h2>
+		<p class="desc">A daily 30-second exercise to help your mind prioritize positive visual cues.</p>
+		<ul id="history-list" class="history-list"></ul>
+		<button onclick="closeTutorial()">START SESSION</button>
+	</div>
+
+	<div id="overlay" class="modal">
+		<h2>FIND OVER!</h2>
+		<p>You spotted <span id="final-score" style="font-size: 2.5rem; color: var(--accent); font-weight: bold;">0</span> smiles! Can you find more?</p>
+		<button onclick="startGame()">TRY AGAIN</button>
+		<button onclick="shareGame()" style="background: none; border:1px solid white;">SHARE PROGRESS 📤</button>
+	</div>
+
+	<div id="privacy-modal" class="modal">
+		<h2>Privacy Policy</h2>
+		<div>
+			<p><strong>Data collection:</strong> We do not collect, store, or share any personal data. All game progress (scores) is stored locally on your device via <em>localStorage</em>.</p>
+			<p><strong>Cookies:</strong> This app does not use cookies for tracking.</p>
+			<p><strong>Third Parties:</strong> No data is sent to external servers.</p>
+		</div>
+		<button onclick="hidePrivacy()">CLOSE</button>
+	</div>
+	<script type="text/javascript" src="./js/game.js"></script>
+</body>
+</html>

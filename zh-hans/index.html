@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+
+	<title>微笑捕手｜30秒专注力与积极心理训练</title>
+	<meta name="description" content="微笑捕手是一款轻量级大脑训练游戏。通过在30秒内捕捉积极面部表情，帮助你训练“积极偏向”，提升专注力并改善情绪健康。只需片刻，让大脑更敏锐、更快乐。">
+	<meta name="keywords" content="微笑捕手,专注力训练,心理健康工具,积极心理学,大脑游戏,认知训练,压力缓解,寻找笑脸,心理暗示训练">
+	
+	<meta property="og:title" content="30秒挑战：你能找到几个微笑？">
+	<meta property="og:description" content="捕捉积极表情，训练你的积极倾向。只需30秒，让大脑更敏锐、更快乐。">
+	<meta property="og:image" content="https://xiangxinotes.github.io/smile-finder/assets/og-zh-hans.png">
+	<meta property="og:url" content="https://xiangxinotes.github.io/smile-finder/zh-hans/">
+	<meta property="og:type" content="website">
+
+	<link rel="canonical" href="https://xiangxinotes.github.io/smile-finder/zh-hans/">
+	<link rel="alternate" hreflang="en" href="https://xiangxinotes.github.io/smile-finder/">
+	<link rel="alternate" hreflang="zh-Hans" href="https://xiangxinotes.github.io/smile-finder/zh-hans/">
+	<link rel="alternate" hreflang="zh-hant" href="https://xiangxinotes.github.io/smile-finder/zh-hant/">
+	<link rel="alternate" hreflang="x-default" href="https://xiangxinotes.github.io/smile-finder/">
+
+	<link rel="icon" href="https://gav.farm/😃">
+	<link rel="manifest" href="../manifest.json">
+	<meta name="theme-color" content="#1a1a2e">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body>
+	<div id="game-container">
+		<header id="header-area">
+			<h1>微笑捕手</h1>
+			<div id="stats-bar">
+				<div class="stat-item"><span class="label">倒计时</span><span class="val">⏱️ <span id="timer">30</span></span></div>
+				<div class="stat-item"><span class="label">分数</span><span class="val">⭐️ <span id="score">0</span></span></div>
+				<div class="stat-item"><span class="label">最高分</span><span class="val">🏆 <span id="best">0</span></span></div>
+			</div>
+			<div id="target-box">
+				<span class="label">当前目标:</span>
+				<div id="target-list">😃</div>
+			</div>
+		</header>
+		<main id="grid"></main>
+
+		<footer id="footer-area">
+			<a href="../?lang=en&autoplay=true">EN</a> | 
+			<a href="../zh-hant/?autoplay=true">繁中</a> | 
+			<a onclick="showPrivacy()" class="privacy-link">隐私政策</a>
+		</footer>
+	</div>
+
+	<div id="tutorial-overlay" class="modal" style="display: flex;">
+		<div style="font-size: 4rem; margin-bottom: 20px;">🧠</div>
+		<h2>训练你的专注力</h2>
+		<p class="desc">每天 30 秒的练习，帮助你的大脑优先关注积极的视觉提示。</p>
+		<ul id="history-list" class="history-list"></ul>
+		<button onclick="closeTutorial()">开始练习</button>
+	</div>
+
+	<div id="overlay" class="modal">
+		<h2>捕手时刻</h2>
+		<p>你发现了 <span id="final-score" style="font-size: 2.5rem; color: var(--accent); font-weight: bold;">0</span> 个笑容，还能更多吗？</p>
+		<button onclick="startGame()">再试一次</button>
+		<button onclick="shareGame()" style="background: none; border:1px solid white;">分享战绩 📤</button>
+	</div>
+
+	<div id="privacy-modal" class="modal">
+		<h2>隐私政策</h2>
+		<div>
+			<p><strong>数据收集：</strong>我们不收集、存储或分享任何个人数据。所有游戏进度（分数）都通过<em>localStorage</em>存储在您的设备上。</p>
+			<p><strong>Cookies：</strong>此应用程序不使用Cookie进行追踪。</p>
+			<p><strong>第三方：</strong>不会向外部服务器发送任何数据。</p>
+		</div>
+		<button onclick="hidePrivacy()">关闭</button>
+	</div>
+	<script type="text/javascript" src="../js/game.js"></script>
+</body>
+</html>

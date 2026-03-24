@@ -1,0 +1,24 @@
+{
+	"en":{
+		"shareTpl": "I found {score} smiles! Can you beat me? 🧠😃",
+		"copySuccess":"Copied to clipboard!",
+		"returnTitle": "Welcome Back!",
+		"returnDesc": "Ready to beat your best score of {best}?",
+		"returnBtn": "START NOW"
+
+	},
+	"zh-hans":{
+		"shareTpl": "我在《微笑猎人》里找到了{score}个微笑！听说没人能超过我，你要来试试吗？🧠😃",
+		"copySuccess":"成绩已复制!",
+		"returnTitle": "欢迎回来！",
+		"returnDesc": "当前最高{best}分，这次能突破吗？",
+		"returnBtn": "开始挑战"
+	},
+	"zh-hant":{
+		"shareTpl": "我在《微笑獵人》裡找到了{score}個微笑！聽說沒人能超過我，你要來試試嗎？🧠😃",
+		"copySuccess":"成績已複製!",
+		"returnTitle": "歡迎回來！",
+		"returnDesc": "當前最高{best}分，這次能突破嗎？",
+		"returnBtn": "開始挑戰"
+	}
+}
