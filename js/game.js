@@ -12,7 +12,11 @@ const tutorialOverlay = document.getElementById('tutorial-overlay'), historyList
 let highScore = localStorage.getItem('smileHighScore') || 0;
 let history = JSON.parse(localStorage.getItem('smileHistory')) || [];
 
-fetch('../locales.json')
+// 自动适配本地 / 线上
+const isGitHub = window.location.hostname === 'xiangxinotes.github.io';
+const jsonPath = isGitHub ? '/smile-finder/locales.json' : '/locales.json';
+
+fetch(jsonPath)
     .then(response => response.json())
     .then(data => {
         dynamicTexts = data[currentLang] || data['en'];
