@@ -12,7 +12,7 @@ const tutorialOverlay = document.getElementById('tutorial-overlay'), historyList
 let highScore = localStorage.getItem('smileHighScore') || 0;
 let history = JSON.parse(localStorage.getItem('smileHistory')) || [];
 
-fetch('/locales.json')
+fetch('../locales.json')
     .then(response => response.json())
     .then(data => {
         dynamicTexts = data[currentLang] || data['en'];
