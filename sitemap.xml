@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+   <!-- 英文首页 -->
+   <url>
+      <loc>https://xiangxinotes.github.io/smile-finder</loc>
+      <lastmod>2026-03-25</lastmod>
+      <priority>1.0</priority>
+      <!-- 多语言版本声明 -->
+      <xhtml:link rel="alternate" hreflang="en" href="https://xiangxinotes.github.io/smile-finder" />
+      <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xiangxinotes.github.io/smile-finder/zh-hans" />
+      <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://xiangxinotes.github.io/smile-finder/zh-hant" />
+   </url>
+
+   <!-- 简体中文首页 -->
+   <url>
+      <loc>https://xiangxinotes.github.io/smile-finder/zh-hans</loc>
+      <lastmod>2026-03-25</lastmod>
+      <priority>1.0</priority>
+      <!-- 多语言版本声明 -->
+      <xhtml:link rel="alternate" hreflang="en" href="https://xiangxinotes.github.io/smile-finder" />
+      <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xiangxinotes.github.io/smile-finder/zh-hans" />
+      <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://xiangxinotes.github.io/smile-finder/zh-hant" />
+   </url>
+
+   <!-- 繁体中文首页 -->
+   <url>
+      <loc>https://xiangxinotes.github.io/smile-finder/zh-hant</loc>
+      <lastmod>2026-03-25</lastmod>
+      <priority>1.0</priority>
+      <!-- 多语言版本声明 -->
+      <xhtml:link rel="alternate" hreflang="en" href="https://xiangxinotes.github.io/smile-finder" />
+      <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xiangxinotes.github.io/smile-finder/zh-hans" />
+      <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://xiangxinotes.github.io/smile-finder/zh-hant" />
+   </url>
+
+</urlset>
