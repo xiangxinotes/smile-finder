@@ -65,6 +65,7 @@ function playSound(freq,type){
 
 function startGame(){
     score=0,timeLeft=30;gameActive=true;isPaused=false;
+    document.documentElement.style.background="#1a1a2e";
     document.body.style.background="#1a1a2e";
     document.getElementById('score').innerText=score;
     document.getElementById('timer').innerText=timeLeft;
