@@ -86,9 +86,9 @@ function renderGrid(){
     const grid=document.getElementById('grid');
     let activeTargets = [allTargets[0]],numSmiles=1,gridSize=4,distCount=4;
 
-    if(score>=25){document.body.style.background="#432818";activeTargets=allTargets;numSmiles=3;gridSize=6;distCount=8;}
-    else if(score>=15){document.body.style.background="#132a13";activeTargets=allTargets.slice(0,3);numSmiles=2;gridSize=5;distCount=6;}
-    else if(score>=8){document.body.style.background="#240046";activeTargets=allTargets.slice(0,2);numSmiles=2;gridSize=4;distCount=5;}
+    if(score>=25){document.documentElement.style.background="#432818";document.body.style.background="#432818";activeTargets=allTargets;numSmiles=3;gridSize=6;distCount=8;}
+    else if(score>=15){document.documentElement.style.background="#132a13";document.body.style.background="#132a13";activeTargets=allTargets.slice(0,3);numSmiles=2;gridSize=5;distCount=6;}
+    else if(score>=8){document.documentElement.style.background="#240046";document.body.style.background="#240046";activeTargets=allTargets.slice(0,2);numSmiles=2;gridSize=4;distCount=5;}
     else if(score>=4){numSmiles=2;}
 
     document.getElementById('target-list').innerText=activeTargets.join(' ');
