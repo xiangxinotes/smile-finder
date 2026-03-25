@@ -1,16 +1,17 @@
 {
 	"name": "Smile Finder",
 	"short_name": "Smile",
-	"start_url": "/",
+	"start_url": "/smile-finder",
 	"display": "standalone",
 	"background-color": "#1a1a2e",
 	"theme-color": "#e94560",
 	"description": "Train your brain's positive bias.",
 	"icons":[
 		{
-			"src": "https://cdn-icons-png.flaticon.com/512/512/742/742751.png",
+			"src": "./assets/icon-512.png",
 			"sizes":"512x512",
-			"type":"image/png"
+			"type":"image/png",
+			"purpose": "any maskable"
 		}
 	]
 }
