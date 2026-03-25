@@ -16,12 +16,6 @@ let history = JSON.parse(localStorage.getItem('smileHistory')) || [];
 const isGitHub = window.location.hostname === 'xiangxinotes.github.io';
 const jsonPath = isGitHub ? '/smile-finder/locales.json' : '/locales.json';
 
-function resumeAudio(){
-    if (audioCtx.state === 'suspended'){
-        audioCtx.resume();
-    }
-}
-
 fetch(jsonPath)
     .then(response => response.json())
     .then(data => {
@@ -86,7 +80,6 @@ function startGame(){
         document.getElementById('timer').innerText=timeLeft;
         if(timeLeft<=0) endGame();
     }, 1000);
-    resumeAudio();
     renderGrid();
 }
 
@@ -183,3 +176,21 @@ function closeTutorial(){
 }
 
 // if(localStorage.getItem('smileTutorialSeen')){ tutorialOverlay.style.display = 'none';setTimeout(startGame, 300);}
+
+function unlockAudioContext(){
+    if(typeof audioCtx !== 'undefined' && audioCtx.state === 'suspended'){
+        audioCtx.resume();
+
+        const buffer = audioCtx.createBuffer(1,1,22050);
+        const source = audioCtx.createBufferSource();
+        source.buffer = buffer;
+        source.connect(audioCtx.destination);
+
+        source.start(0);
+        window.removeEventListener('click', unlockAudioContext);
+        window.removeEventListener('touched', unlockAudioContext);
+    }
+}
+
+window.addEventListener('click', unlockAudioContext);
+window.addEventListener('touched', unlockAudioContext);
