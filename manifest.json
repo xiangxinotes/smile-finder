@@ -8,7 +8,7 @@
 	"description": "Train your brain's positive bias.",
 	"icons":[
 		{
-			"src": "./assets/icon-512.png",
+			"src": "/smile-finder/assets/icon-512.png",
 			"sizes":"512x512",
 			"type":"image/png",
 			"purpose": "any maskable"
