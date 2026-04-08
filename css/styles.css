@@ -16,7 +16,7 @@ body,html{margin:0;padding: 0;width: 100%;height: 100%;/*overflow: hidden;*/back
 #target-list {font-size:2rem;min-height: 2.2rem;display: flex;justify-content: center;gap:12px;margin-top: 5px;}
 
 #grid {display: grid;gap:8px;margin: auto;padding:12px;border-radius: 24px;width: 88vw;max-width: 380px;aspect-ratio: 1/1;background: rgba(255, 255, 255, 0.03);border:2px solid rgba(255, 255, 255, 0.1);}
-.face {cursor: pointer;display: flex;align-items: center;justify-content: center;aspect-ratio: 1/1;background: rgba(255, 255, 255, 0.08);border-radius: 12px;font-size: 2.2rem;user-select: none;}
+.face {cursor: pointer;display: flex;align-items: center;justify-content: center;aspect-ratio: 1/1;background: rgba(255, 255, 255, 0.08);border-radius: 12px;font-size: 2.2rem;user-select: none;-webkit-user-select: none;touch-action: manipulation;-webkit-tap-highlight-color: transparent;}
 .face:hover {background: rgba(255,255,255,0.15);}
 .face:active {transform:scale(0.9);}
 

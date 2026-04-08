@@ -1,6 +1,10 @@
 const allTargets=['😃','🙂','😊','😀'];
 const allDistractors=['😐','☹️','😟','😕','😮','😒','😠','😑'];
 
+// const allTargets=['😸' ,'😼' ,'😺' ,'😻'];
+// const allDistractors=['😽', '😾', '😿', '🙀'];
+
+
 let score=0, timeLeft=30, gameActive=false,timerInterval;
 let dynamicTexts={};
 let isPaused = false;
@@ -106,7 +110,7 @@ function renderGrid(){
         if (smilePositions.includes(i)){
             div.innerText=activeTargets[Math.floor(Math.random()*activeTargets.length)];
             div.dataset.target = "true";
-            div.onclick = function(){
+            div.onpointerdown = function(){
                 if(!gameActive || this.dataset.clicked === "true") return;
                 this.style.opacity="0.2"; this.dataset.clicked="true";
                 score++;
@@ -117,7 +121,7 @@ function renderGrid(){
             };
         } else {
             div.innerText = currentDists[Math.floor(Math.random()*currentDists.length)];
-            div.onclick = () => {
+            div.onpointerdown = () => {
                 if (!gameActive) return;
                 timeLeft = Math.max(0, timeLeft-2); // 2-second penalty
                 document.getElementById('timer').innerText = timeLeft;
