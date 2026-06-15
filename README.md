@@ -5,7 +5,7 @@
 
 **微笑捕手**是一款基于 Web 的极简专注力训练游戏。通过在30秒内捕捉尽可能多的积极表情（笑脸），帮助用户训练“积极偏向（Positive Bias）”，提升专注力并改善情绪健康。
 
-[🚀 立即开始游戏](https://xiangxinotes.github.io/smile-finder/?utm_source=github&utm_campaign=read_me)
+[🚀 立即开始游戏](https://smilefinder.xiangxi.work/?utm_source=github&utm_campaign=read_me)
 
 --- 
 
@@ -70,4 +70,3 @@ git clone https://github.com/xiangxinotes/smile-finder.git
 如果你喜欢这个项目，欢迎点个 **Star** ⭐️！
 
 如果有任何改进建议，欢迎提交 **Issue** 或 **PR**。
-
